@@ -1,0 +1,18 @@
+Strategy -
+1. Decide the computer's move based on the cell user has just clicked (and making use of the user's previous choices which are stored in the form of an array).
+2. Winning:
+	2.1: Decide the next optimal move to win (trying to get horizontal/vertical/diagonal 'partners') to end the game (by winning!)
+	2.2: If 2.1 fails, try to block the ways in which the opponent (human) can win the game. For ex: It might be possible that the opponent (human) will be able to win the game in the next round by any of the horizontal/vertical/diagonal combinations. The optimal strategy at this point should be to block this move
+	2.3: If 2.1 & 2.2 fails, try to fill the same column (if available) with your (computer's) block 
+	2.4: If 2.1, 2.2 & 2.3 fails, just fill the slot in the next possible column (if the column is number 6, try filling in again from column number 1) 
+
+Information known beforehand -
+1. It's a good strategy to get hold of elements in the 3rd column (has more potential of finding 'partners' from a horizontal/vertical/diagonal point of view, because of its location). Similarly, if everything is kept same, the positions closer to the centre of the board is better
+2. The game may have 3 outcomes:
+	2.1: Player (human) winning the game
+	2.2: Player (computer) winning the game
+	2.3: Tie b/w the 2 players
+3. After every move, we need to:
+	3.1: Check if the player won the game (and show corresponding responses on the screen)
+	3.2: If 3.1 is not applicable, update the events on the screen
+	3.3: Pass the chance to the 'other' player (human -> computer || computer -> human)
